@@ -18,12 +18,11 @@
         <nav>
             <ul>
                 <li><a href="#">Beranda</a></li>
-                <li><a href="#">Lokasi</a></li>
-                <li><a href="#">Tentang</a></li>
-                <li><a href="#">Kontak</a></li>
+                <li><a href="#petaNlist">Lokasi</a></li>
+                <li><a href="#informasi">Kontak</a></li>
             </ul>
         </nav>
-        <a href="#" class="btn-login">Masuk</a>
+<!--        <a href="#" class="btn-login">Masuk</a>-->
     </div>
 </header>
 
@@ -38,13 +37,14 @@
 <!--                <input type="text" placeholder="Cari lokasi WiFi...">-->
                 <a href="{% url 'landing' %}">
                 <button>ISI SURVEY</button>
+                </a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ===== INFO SECTION (MAP + LIST SIDE BY SIDE) ===== -->
-<section class="info-section">
+<section id = "petaNlist" class="info-section">
     <div class="container">
         <div class="info-card">
 
@@ -135,46 +135,50 @@
 </section>
 
 <!-- ===== FOOTER ===== -->
-<<footer class="footer">
-    <div class="footer-container">
 
-        <div class="footer-col">
-            <h3>WiFi Publik</h3>
-            <p>Layanan internet gratis untuk masyarakat Sumatera Utara.</p>
-        </div>
+<footer class="footer">
+    <section id = "informasi">
+        <div class="footer-container">
 
-<!--        <div class="footer-col">-->
-<!--            <h4>Menu</h4>-->
-<!--            <ul>-->
-<!--                <li><a href="#">Beranda</a></li>-->
-<!--                <li><a href="#">Lokasi</a></li>-->
-<!--                <li><a href="#">Tentang</a></li>-->
-<!--                <li><a href="#">Kontak</a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
-
-        <div class="footer-col">
-            <h4>Kontak</h4>
-            <p>Kontak Pengaduan : 0851 7211 1109</p>
-            <p>e-Mail : aptikadiskominfo@sumutprov.go.id</p>
-            <p>Website : wifigratis.sumutprov.go.id</p>
-        </div>
-
-        <div class="footer-col">
-            <h4>Ikuti Kami</h4>
-            <div class="social">
-                <a href="#">🌐</a>
-                <a href="#">📘</a>
-                <a href="#">📷</a>
+            <div class="footer-col">
+                <h3>WiFi Publik</h3>
+                <p>Layanan internet gratis untuk masyarakat Sumatera Utara.</p>
             </div>
+
+    <!--        <div class="footer-col">-->
+    <!--            <h4>Menu</h4>-->
+    <!--            <ul>-->
+    <!--                <li><a href="#">Beranda</a></li>-->
+    <!--                <li><a href="#">Lokasi</a></li>-->
+    <!--                <li><a href="#">Tentang</a></li>-->
+    <!--                <li><a href="#">Kontak</a></li>-->
+    <!--            </ul>-->
+    <!--        </div>-->
+
+            <div class="footer-col">
+                <h4>Kontak</h4>
+                <p>Kontak Pengaduan : 0851 7211 1109</p>
+                <p>e-Mail : aptikadiskominfo@sumutprov.go.id</p>
+                <p>Website : wifigratis.sumutprov.go.id</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Ikuti Kami</h4>
+                <div class="social">
+                    <a href="#">🌐</a>
+                    <a href="#">📘</a>
+                    <a href="#">📷</a>
+                </div>
+            </div>
+
         </div>
 
-    </div>
-
-    <div class="footer-bottom">
-        © 2026 WiFi Publik Sumatera Utara. All Rights Reserved.
-    </div>
+        <div class="footer-bottom">
+            © 2026 WiFi Publik Sumatera Utara. All Rights Reserved.
+        </div>
+    </section>
 </footer>
+
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 

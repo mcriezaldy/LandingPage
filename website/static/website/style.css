@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f2ee;
+    color: #333;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== NAVBAR ===== */
+header {
+    background: #6b3f1d;
+    padding: 15px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+.btn-login {
+    background: white;
+    color: #6b3f1d;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== BANNER ===== */
+.banner {
+    background: url('banner.png') center center / cover no-repeat;
+    min-height: 105vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+}
+
+.banner-content {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.banner-content h1 {
+    font-size: 48px;
+    color: #6b3f1d;
+}
+
+.banner-content p {
+    margin: 20px 0;
+    color: #4b2c15;
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    padding: 12px;
+    width: 70%;
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #ccc;
+}
+
+.search-box button {
+    padding: 12px 25px;
+    border: none;
+    background: #6b3f1d;
+    color: white;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #4e2d14;
+}
+
+/* ===== INFO SECTION ===== */
+.info-section {
+    margin-top: -80px;
+    padding: 80px 0;
+}
+
+.info-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+/* MAP */
+.map-box {
+    flex: 1;
+    min-width: 300px;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 420px;
+    border-radius: 15px;
+    border: none;
+}
+
+/* INFO LIST */
+.info-list {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-list h3 {
+    color: #6b3f1d;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    background: #f8f5f2;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.info-item:hover {
+    background: #efe7df;
+    transform: translateX(5px);
+}
+
+.info-item strong {
+    color: #6b3f1d;
+}
+
+.info-item p {
+    font-size: 14px;
+    color: #777;
+}
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.aktif {
+    background: #d4edda;
+    color: #2e7d32;
+}
+
+.maintenance {
+    background: #f8d7da;
+    color: #a94442;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #5a3415;
+    color: #f5f3ef;
+    padding-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    padding: 0 60px 40px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #e5d8c8;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #e5d8c8;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.social a {
+    font-size: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background: #4a2b10;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .footer-container {
+        padding: 0 30px 40px;
+    }
+}
+
+/* Maps */
+.map-box {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+}
+
+
+/* Wifi Marker */
+
+.wifi-marker {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(145deg, #8b5e34, #6b4226);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+    border: 3px solid #fff;
+    transition: 0.3s;
+}
+
+.wifi-marker:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(139,94,52,0.8);
+}

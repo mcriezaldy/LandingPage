@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u@-nm8q+u(vucpsg7e#di$zrakcyk$6jphs+z7z2)@ji78cz!z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'survey',
+    'rest_framework',
+    'website',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +83,7 @@ DATABASES = {
         'NAME': 'wifi_diskominfo_db',
         'USER': 'wifiuser',
         'PASSWORD': 'passwordku123',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
@@ -123,9 +125,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+API_SECRET_KEY = "RAHASIA123"
+
 import os
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'survey/static'),
+    os.path.join(BASE_DIR, 'static'),
+
 ]
 
 # Default primary key field type

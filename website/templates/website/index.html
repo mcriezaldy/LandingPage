@@ -1,0 +1,212 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi Gratis - Sumatera Utara</title>
+    <link rel="stylesheet" href="{% static 'website/style.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header>
+    <div class="container nav">
+        <div class="logo">WiFi Publik</div>
+        <nav>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Lokasi</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn-login">Masuk</a>
+    </div>
+</header>
+
+<!-- ===== BANNER ===== -->
+<section class="banner">
+    <div class="overlay">
+        <div class="banner-content">
+            <h1>WIFI GRATIS<br>DI RUANG PUBLIK</h1>
+            <p>Nikmati akses internet gratis di berbagai titik Sumatera Utara.</p>
+
+            <div class="search-box">
+                <input type="text" placeholder="Cari lokasi WiFi...">
+                <button>Cari</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== INFO SECTION (MAP + LIST SIDE BY SIDE) ===== -->
+<section class="info-section">
+    <div class="container">
+        <div class="info-card">
+
+            <!-- MAP LEFT -->
+            <div id="map" class="map-box"></div>
+
+
+            <!-- INFO RIGHT -->
+            <div class="info-list">
+                <h3>Titik WiFi Tersedia</h3>
+
+                <div class="info-item">
+                    <div>
+                        <strong>Taman Cadika Pramuka (Kota MEDAN)</strong>
+                        <p>Kecepatan 50 Mbps Dedicated</p>
+                    </div>
+                    <span class="status aktif">Aktif</span>
+                </div>
+
+                <div class="info-item">
+                    <div>
+                        <strong>Taman Kebun Bunga (Kota MEDAN)</strong>
+                        <p>Kecepatan 50 Mbps Dedicated</p>
+                    </div>
+                    <span class="status aktif">Aktif</span>
+                </div>
+
+                <div class="info-item">
+                    <div>
+                        <strong>Lapangan Merdeka (Kota BINJAI)</strong>
+                        <p>Kecepatan 50 Mbps Dedicated</p>
+                    </div>
+                    <span class="status aktif">Aktif</span>
+                </div>
+
+                <div class="info-item">
+                    <div>
+                        <strong>Lapangan Merdeka (Kota TEBING TINGGI)</strong>
+                        <p>Kecepatan 50 Mbps Dedicated</p>
+                    </div>
+                    <span class="status maintenance">Maintenance</span>
+                </div>
+
+                <div class="info-item">
+                    <div>
+                        <strong>Lapangan Merdeka</strong>
+                        <p>Gratis 24 jam</p>
+                    </div>
+                    <span class="status aktif">Aktif</span>
+                </div>
+
+                <div class="info-item">
+                    <div>
+                        <strong>Lapangan Merdeka</strong>
+                        <p>Gratis 24 jam</p>
+                    </div>
+                    <span class="status aktif">Aktif</span>
+                </div>
+
+                <div class="info-item">
+                    <div>
+                        <strong>Lapangan Merdeka</strong>
+                        <p>Gratis 24 jam</p>
+                    </div>
+                    <span class="status aktif">Aktif</span>
+                </div>
+
+                <div class="info-item">
+                    <div>
+                        <strong>Lapangan Merdeka</strong>
+                        <p>Gratis 24 jam</p>
+                    </div>
+                    <span class="status aktif">Aktif</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3>WiFi Publik</h3>
+            <p>Layanan internet gratis untuk masyarakat Sumatera Utara.</p>
+        </div>
+
+<!--        <div class="footer-col">-->
+<!--            <h4>Menu</h4>-->
+<!--            <ul>-->
+<!--                <li><a href="#">Beranda</a></li>-->
+<!--                <li><a href="#">Lokasi</a></li>-->
+<!--                <li><a href="#">Tentang</a></li>-->
+<!--                <li><a href="#">Kontak</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+
+        <div class="footer-col">
+            <h4>Kontak</h4>
+            <p>Email: info@wifisumut.id</p>
+            <p>Telp: 0812-3456-7890</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Ikuti Kami</h4>
+            <div class="social">
+                <a href="#">🌐</a>
+                <a href="#">📘</a>
+                <a href="#">📷</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 WiFi Publik Sumatera Utara. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    var map = L.map('map').setView([2.1154, 99.5451], 7);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // =============================
+    // ICON WIFI COKLAT CUSTOM
+    // =============================
+    var wifiIcon = L.divIcon({
+        html: `
+            <div class="wifi-marker">
+                📶
+            </div>
+        `,
+        className: '',
+        iconSize: [50, 50],
+        iconAnchor: [25, 50],
+        popupAnchor: [0, -45]
+    });
+
+    var locations = [
+        { name: "Taman Cadika Pramuka", lat: 3.5301536944823835, lng: 98.66036605796005 },
+        { name: "Taman Kebun Bunga", lat: 3.5875817333383457, lng: 98.66987843565998 },
+        { name: "Lapangan Merdeka Binjai", lat: 3.6030582523433528, lng: 98.48121442037886 },
+        { name: "Lapangan Merdeka Tebing Tinggi", lat: 3.326893028241515, lng: 99.16310102193196 },
+    ];
+
+    locations.forEach(function(loc) {
+        L.marker([loc.lat, loc.lng], { icon: wifiIcon })
+            .addTo(map)
+            .bindPopup("<strong>" + loc.name + "</strong><br>WiFi Gratis");
+    });
+
+});
+</script>
+
+</body>
+</html>

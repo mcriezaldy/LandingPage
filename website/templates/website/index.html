@@ -35,8 +35,9 @@
             <p>Nikmati akses internet gratis di berbagai titik Sumatera Utara.</p>
 
             <div class="search-box">
-                <input type="text" placeholder="Cari lokasi WiFi...">
-                <button>Cari</button>
+<!--                <input type="text" placeholder="Cari lokasi WiFi...">-->
+                <a href="{% url 'landing' %}">
+                <button>ISI SURVEY</button>
             </div>
         </div>
     </div>
@@ -58,7 +59,7 @@
                 <div class="info-item">
                     <div>
                         <strong>Taman Cadika Pramuka (Kota MEDAN)</strong>
-                        <p>Kecepatan 50 Mbps Dedicated</p>
+                        <p>Tersedia 9 titik WiFi dengan kecepatan  50 Mbps Dedicated di setiap titik </p>
                     </div>
                     <span class="status aktif">Aktif</span>
                 </div>
@@ -66,7 +67,7 @@
                 <div class="info-item">
                     <div>
                         <strong>Taman Kebun Bunga (Kota MEDAN)</strong>
-                        <p>Kecepatan 50 Mbps Dedicated</p>
+                        <p>Tersedia 6 titik WiFi dengan kecepatan  50 Mbps Dedicated di setiap titik</p>
                     </div>
                     <span class="status aktif">Aktif</span>
                 </div>
@@ -74,7 +75,7 @@
                 <div class="info-item">
                     <div>
                         <strong>Lapangan Merdeka (Kota BINJAI)</strong>
-                        <p>Kecepatan 50 Mbps Dedicated</p>
+                        <p>Tersedia 8 titik WiFi dengan kecepatan  50 Mbps Dedicated di setiap titik</p>
                     </div>
                     <span class="status aktif">Aktif</span>
                 </div>
@@ -82,39 +83,47 @@
                 <div class="info-item">
                     <div>
                         <strong>Lapangan Merdeka (Kota TEBING TINGGI)</strong>
-                        <p>Kecepatan 50 Mbps Dedicated</p>
+                        <p>Tersedia 4 titik WiFi dengan kecepatan  50 Mbps Dedicated di setiap titik</p>
                     </div>
                     <span class="status maintenance">Maintenance</span>
                 </div>
 
                 <div class="info-item">
                     <div>
-                        <strong>Lapangan Merdeka</strong>
-                        <p>Gratis 24 jam</p>
+                        <strong>Lapangan Sultan Abdul Jalil Rahmadsyah (Kota TANJUNG BALAI)</strong>
+                        <p>Tersedia 6 titik WiFi dengan kecepatan  50 Mbps Dedicated di setiap titik</p>
                     </div>
                     <span class="status aktif">Aktif</span>
                 </div>
 
                 <div class="info-item">
                     <div>
-                        <strong>Lapangan Merdeka</strong>
-                        <p>Gratis 24 jam</p>
+                        <strong>Lapangan Alun Alun Haji Adam Malik (Kota PEMATANG SIANTAR)</strong>
+                        <p>Tersedia 4 titik WiFi dengan kecepatan  50 Mbps Dedicated di setiap titik</p>
                     </div>
                     <span class="status aktif">Aktif</span>
                 </div>
 
                 <div class="info-item">
                     <div>
-                        <strong>Lapangan Merdeka</strong>
-                        <p>Gratis 24 jam</p>
+                        <strong>Masjid Raya Padang Sidimpuan (Kota PADANG SIDEMPUAN)</strong>
+                        <p>Tersedia 4 titik WiFi dengan kecepatan  50 Mbps Dedicated di setiap titik</p>
                     </div>
                     <span class="status aktif">Aktif</span>
                 </div>
 
                 <div class="info-item">
                     <div>
-                        <strong>Lapangan Merdeka</strong>
-                        <p>Gratis 24 jam</p>
+                        <strong>Lapangan Simare-mare (Kota SIBOLGA)</strong>
+                        <p>Tersedia 4 titik WiFi dengan kecepatan  50 Mbps Dedicated di setiap titik</p>
+                    </div>
+                    <span class="status aktif">Aktif</span>
+                </div>
+
+                <div class="info-item">
+                    <div>
+                        <strong>Alun Alun Kota (Kota GUNUNG SITOLI)</strong>
+                        <p>Tersedia 4 titik WiFi dengan kecepatan  50 Mbps Dedicated di setiap titik</p>
                     </div>
                     <span class="status aktif">Aktif</span>
                 </div>
@@ -146,8 +155,9 @@
 
         <div class="footer-col">
             <h4>Kontak</h4>
-            <p>Email: info@wifisumut.id</p>
-            <p>Telp: 0812-3456-7890</p>
+            <p>Kontak Pengaduan : 0851 7211 1109</p>
+            <p>e-Mail : aptikadiskominfo@sumutprov.go.id</p>
+            <p>Website : wifigratis.sumutprov.go.id</p>
         </div>
 
         <div class="footer-col">
@@ -193,10 +203,33 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     var locations = [
-        { name: "Taman Cadika Pramuka", lat: 3.5301536944823835, lng: 98.66036605796005 },
+        { name: "Taman Cadika Pramuka 1", lat: 3.530888, lng: 98.662632 },
+        { name: "Taman Cadika Pramuka 2", lat: 3.529495, lng: 98.662353 },
+        { name: "Taman Cadika Pramuka 3", lat: 3.5304704254190704, lng: 98.66100526818862 },
+        { name: "Taman Cadika Pramuka 4", lat: 3.530808, lng: 98.661770 },
+        { name: "Taman Cadika Pramuka 5", lat: 3.529200, lng: 98.661100 },
+        { name: "Taman Cadika Pramuka 6", lat: 3.529800, lng: 98.661100 },
+        { name: "Taman Cadika Pramuka 7", lat: 3.529180262038056, lng: 98.66156683463693 },
+        { name: "Taman Cadika Pramuka 8", lat: 3.531277629142216, lng: 98.6600508665593 },
+        { name: "Taman Cadika Pramuka 9", lat: 3.5299932259889446, lng: 98.66204921378633 },
         { name: "Taman Kebun Bunga", lat: 3.5875817333383457, lng: 98.66987843565998 },
         { name: "Lapangan Merdeka Binjai", lat: 3.6030582523433528, lng: 98.48121442037886 },
-        { name: "Lapangan Merdeka Tebing Tinggi", lat: 3.326893028241515, lng: 99.16310102193196 },
+        { name: "Lapangan Merdeka Tebing Tinggi 1", lat: 3.326668, lng: 99.163680 },
+        { name: "Lapangan Merdeka Tebing Tinggi 2", lat: 3.327390, lng: 99.162633 },
+        { name: "Lapangan Merdeka Tebing Tinggi 3", lat: 3.326830, lng: 99.162360 },
+        { name: "Lapangan Merdeka Tebing Tinggi 4", lat: 3.326815, lng: 99.162992 },
+        { name: "Alun Alun Gunung Sitoli 1", lat: 1.289900, lng: 97.614700 },
+        { name: "Alun Alun Gunung Sitoli 2", lat: 1.290200, lng: 97.615339 },
+        { name: "Alun Alun Gunung Sitoli 3", lat: 1.289700, lng: 97.615600 },
+        { name: "Alun Alun Gunung Sitoli 4", lat: 1.290300, lng: 97.614800 },
+        { name: "Alun Alun Gunung Sitoli 1", lat: 1.746100, lng: 98.775900 },
+        { name: "Alun Alun Gunung Sitoli 2", lat: 1.746600, lng: 98.775500 },
+        { name: "Alun Alun Gunung Sitoli 3", lat: 1.747400, lng: 98.775700 },
+        { name: "Masjid Raya Padang Sidimpuan", lat: 1.3737903414700694, lng: 99.27046544245417 },
+        { name: "Lapangan Alun Alun Haji Adam Malik", lat: 2.955914129300291, lng: 99.05985999990736 },
+        { name: "Lapangan Sultan Abdul Jalil Rahmadsyah", lat: 2.964108579695244, lng: 99.80100803442895 },
+
+
     ];
 
     locations.forEach(function(loc) {
